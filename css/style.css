@@ -72,6 +72,7 @@ p {
 /*____________________________intro______________________*/
 
 .intro {
+    overflow: hidden;
     height: 100vh;
     background: #2ecc71 url("../image/intro-bg.png") bottom right no-repeat;
     background-size: 100% 100%;
@@ -202,6 +203,13 @@ p {
 .meal-time {
     padding: 140px 0;
     color: #5a5a5a;
+}
+.meal-manu {
+    display: flex;
+    flex-direction: column;
+}
+.meal-manu:nth-child(2) {
+    flex: 1 ;
 }
 
 
