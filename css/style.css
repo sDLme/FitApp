@@ -204,12 +204,87 @@ p {
     padding: 140px 0;
     color: #5a5a5a;
 }
-.meal-manu {
-    display: flex;
-    flex-direction: column;
+.meal-inform {
+    margin-top: 100px;
 }
-.meal-manu:nth-child(2) {
-    flex: 1 ;
+.meal-manu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 420px;
+    padding-left: 135px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 60px rgba(15, 65, 36, 0.05);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+.meal-manu li:hover  {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform:scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+.meal-manu li:nth-child(1) {
+    background: url("../image/appl-item.png") left no-repeat;
+}
+.meal-manu li:nth-child(2) {
+    background: url("../image/sandwich-item.png") left no-repeat;
+}
+.meal-manu li:nth-child(3) {
+    background: url("../image/salat-item.png") left no-repeat;
+}
+.meal-item-wrapp {
+    padding: 10px 0;
+}
+
+.meal-item-wrapp p {
+    line-height: 10px;
+    font-weight: 300 ;
+    font-size: 15px;
+}
+h5 {
+    line-height: 28px;
+    font-weight: 700 ;
+    font-size: 20px;
+    color: #2ecc71;
+}
+.meal-item-wrapp .g-counter {
+    font: 700 12px/22px 'Roboto', sans-serif;
+    color: #2ecc71;
+}
+.g-counter span {
+    position: relative;
+    margin-right: 25px;
+}
+.g-counter span:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -50%;
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+    -moz-transform:translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 5px;
+    height: 5px;
+    background: #b4b4b4;
+    border-radius: 50%;
+}
+.time {
+    font:700 25px/18px 'Roboto';
+    color: #b4b4b4;
+}
+.time span {
+    display: block;
+    text-align: right;
+    font-size: 16px;
+
 }
 
 
