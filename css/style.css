@@ -22,7 +22,12 @@ body,
 
 /*font-family: 'Roboto', sans-serif;*/
 h3, h2 {
-    font: 300 48px/60px 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 70px;
+    font-family: 'Roboto', sans-serif;
+}
+h3 {
+    font-size: 48px;
 }
 h2 {
     font-size: 64px;
@@ -30,9 +35,10 @@ h2 {
 h2:before {
     content: "";
     display: block;
-    width: 140px;
-    height: 140px;
-    background: url("../image/app-icon.png") left no-repeat;
+    width: 80px;
+    height: 80px;
+    background: url(../image/app-icon.png) left no-repeat;
+    background-size: contain;
 
 }
 .width-font {
@@ -40,16 +46,18 @@ h2:before {
 }
 p {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 32px;
 }
-.modals {
-    margin-top: 10px;
-    font: 700 18px/42px 'Roboto', sans-serif;
+.btn-modals, .form-action {
+    margin-top: 20px;
+    font: 700 12px/30px 'Roboto', sans-serif;
     border: none;
+    outline: none;
     border-radius: 21px;
     background-color: #fff;
     color: #2ecc71;
+
 }
 /*_________________________________________________________*/
 /*_____________________________header______________________*/
@@ -62,18 +70,40 @@ p {
 }
 .head-nav li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 .head-nav li a {
     font: 18px/30px 'Roboto', sans-serif;
     color: #fefefe;
 }
+.dropdown-button {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    margin-right: 15px;
+    border: none;
+    background: url("../image/menu-icon.png") center no-repeat;
+}
+.dropdown-menu {
+    margin-top: 115px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.dropdown-menu>li>a {
+    text-align: right;
+    font-weight: 700;
+    color: #fff;
+}
+/*____________________dropdown___________________________*/
+
 /*____________________________header_____________________*/
 /*____________________________intro______________________*/
 
 .intro {
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     background: #2ecc71 url("../image/intro-bg.png") bottom right no-repeat;
     background-size: 100% 100%;
     color: #fff;
@@ -100,7 +130,7 @@ p {
     background: url("../image/google-play.png") center no-repeat;
 }
 .img-wrap {
-    margin-top: 60px;
+    margin-top: 150px;
 }
 .img-wrap img {
     width: 100%;
@@ -113,11 +143,11 @@ p {
     width: 100%;
 }
 .list-option {
+    height: 300px;
+    width: 50%;
     position: relative;
 }
-.list-option li {
-    margin-bottom: 25px;
-}
+
 .text {
     display: none;
     position: absolute;
@@ -129,6 +159,7 @@ p {
 }
 .item {
     display: block;
+    position: absolute;
     width: 60px;
     height: 60px;
     outline: none;
@@ -145,30 +176,40 @@ p {
 }
 
 .ball {
+    top: -20px;
+    right: 40px;
     background: #e7e7e7 url("../image/sound.png") center no-repeat;
 }
 .ball:hover {
     background: #2ecc71 url("../image/sound.png") center no-repeat;
 }
 .date {
+    top: 40px;
+    right: -15px;
     background: #e7e7e7 url("../image/days.png") center no-repeat;
 }
 .date:hover {
     background: #2ecc71 url("../image/days.png") center no-repeat;
 }
 .counter {
+    top: 120px;
+    right: -30px;
     background:#e7e7e7 url("../image/growth.png") center no-repeat;
 }
 .counter:hover {
     background:#2ecc71 url("../image/growth.png") center no-repeat;
 }
 .heart {
+    top: 210px;
+    right: -10px;
     background:#e7e7e7 url("../image/favorite.png") center no-repeat;
 }
 .heart:hover {
     background:#2ecc71 url("../image/favorite.png") center no-repeat;
 }
 .face {
+    top: 270px;
+    right: 45px;
     background: #e7e7e7 url("../image/interface.png") center no-repeat;
 }
 .face:hover {
@@ -209,9 +250,10 @@ p {
 }
 .meal-manu li {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 420px;
+    max-width: 420px;
     padding-left: 135px;
     padding-right: 20px;
     margin-bottom: 25px;
@@ -242,7 +284,7 @@ p {
 }
 
 .meal-item-wrapp p {
-    line-height: 10px;
+    line-height: 20px;
     font-weight: 300 ;
     font-size: 15px;
 }
@@ -284,16 +326,13 @@ h5 {
     display: block;
     text-align: right;
     font-size: 16px;
-
 }
-
 
 /*________________________footer__________________________*/
 
 .site-foot {
-    padding: 115px 0 100px;
-    background: #2ecc71 url("../image/footer-bg.png") center no-repeat;
-    background-size: 100% 100%;
+    background: #2ecc71 url("../image/footer-bg.png") bottom  no-repeat;
+    background-size: contain;
     color: #fff;
 }
 .site-foot .container {
@@ -306,6 +345,55 @@ h5 {
 .site-foot p {
     margin-bottom: 60px;
 }
-.site-foot .container .modals {
-    padding: 0 120px;
+.site-foot .container .btn-modals {
+    padding: 0 80px;
+}
+/*__________popup_____________________________*/
+.window-popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba( 0, 0, 0, 0.7);
+    top:0;
+    left: 0;
+    display: none;
+
+}
+.wp-content {
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #0f0f0f;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+input {
+    max-width: 200px;
+    width: 100%;
+}
+#btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: url("../image/close-button.png") center no-repeat;
+    background-size: contain;
+    border: none;
+    outline: none;
+}
+.form-action {
+    padding: 0 15px;
+    border: 1px solid #3c3c3c;
 }
