@@ -143,8 +143,10 @@ p {
     width: 100%;
 }
 .list-option {
-    height: 300px;
-    width: 50%;
+    height: 465px;
+    max-width: 465px;
+    border-radius: 50%;
+    /*border-right: 1px solid #dbdbdb;*/
     position: relative;
 }
 
@@ -157,7 +159,7 @@ p {
     -moz-transform:translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.item {
+ .item {
     display: block;
     position: absolute;
     width: 60px;
@@ -176,23 +178,23 @@ p {
 }
 
 .ball {
-    top: -20px;
-    right: 40px;
+    top: 10px;
+    right: 70px;
     background: #e7e7e7 url("../image/sound.png") center no-repeat;
 }
 .ball:hover {
     background: #2ecc71 url("../image/sound.png") center no-repeat;
 }
 .date {
-    top: 40px;
-    right: -15px;
+    top: 90px;
+    right: -5px;
     background: #e7e7e7 url("../image/days.png") center no-repeat;
 }
 .date:hover {
     background: #2ecc71 url("../image/days.png") center no-repeat;
 }
 .counter {
-    top: 120px;
+    top: 200px;
     right: -30px;
     background:#e7e7e7 url("../image/growth.png") center no-repeat;
 }
@@ -200,16 +202,16 @@ p {
     background:#2ecc71 url("../image/growth.png") center no-repeat;
 }
 .heart {
-    top: 210px;
-    right: -10px;
+    top: 300px;
+    right: -5px;
     background:#e7e7e7 url("../image/favorite.png") center no-repeat;
 }
 .heart:hover {
     background:#2ecc71 url("../image/favorite.png") center no-repeat;
 }
 .face {
-    top: 270px;
-    right: 45px;
+    top: 390px;
+    right: 60px;
     background: #e7e7e7 url("../image/interface.png") center no-repeat;
 }
 .face:hover {
