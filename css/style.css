@@ -37,7 +37,7 @@ h2:before {
     display: block;
     width: 80px;
     height: 80px;
-    background: url(../image/app-icon.png) left no-repeat;
+    background: url('../image/app-icon.png') left no-repeat;
     background-size: contain;
 
 }
@@ -273,7 +273,7 @@ p {
     transform: scale(1.1, 1.1);
 }
 .meal-manu li:nth-child(1) {
-    background: url("../image/appl-item.png") left no-repeat;
+    background: url("../image/apple-item.png") left no-repeat;
 }
 .meal-manu li:nth-child(2) {
     background: url("../image/sandwich-item.png") left no-repeat;
